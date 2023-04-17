@@ -1,0 +1,42 @@
+/* This file will be imported into my css file and not my html file*/ 
+/* I am using fonts thatv i downloaded from the internet*/
+
+
+/*Creating a font-face rule. I will do this for each one of my fonts.*/
+
+
+/* font-family: Dosis */
+@font-face {
+    font-family: Dosis;
+    src: url(../fonts/Dosis/Dosis-VariableFont_wght.ttf);
+}
+
+/* font-family: Golos_Text */
+@font-face {
+    font-family: Golos_Text;
+    src: url(../fonts/Golos_Text/GolosText-VariableFont_wght.ttf);
+}
+
+/* font-family: Monteserrat */
+@font-face {
+    font-family: Montserrat;
+    src: url(../fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+
+/* font-family: Noto_Serif */
+@font-face {
+    font-family: Noto_Serif;
+    src: url(../fonts/Noto_Serif/NotoSerif-Regular.ttf);
+}
+
+/* font-family: Shantell_Sans */
+@font-face {
+    font-family: Shantell-Sans;
+    src: url(../fonts/Shantell_Sans/ShantellSans-VariableFont_BNCE\,INFM\,SPAC\,wght.ttf);
+}
+
+/* font-family: Xanh_Mono */
+@font-face {
+    font-family: Xanh_Mono;
+    src: url(../fonts/Xanh_Mono/XanhMono-Regular.ttf);
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decor</title>
+
+
+    <!--link to css file-->
+    <link rel="stylesheet" href="./CSS/style.css">
+
+    <!--link to all.css-->
+    <link rel="stylesheet" href="./CSS/all.css">
+</head>
+<body>
+    <!-- Creating a navigation menu so we use a nav tag-->
+    <nav class="nav">
+        <div class="nav-menu flex-row">
+            <div class="brand flex-row">
+                
+                <div class="logo">
+                    <img src="./images/HGS_logo-PhotoRoom.png">
+                </div>
+                <a href="index.html">Home Goods Store</a>
+            </div>
+
+            <div class="toggle-collapse">  <!--If the screen size is partcularly small, we wil have a toggle icon instead of being able to see all the navigation items-->
+                <div class="toggle-icons">
+                    <i class="fas fa-bars"></i>
+                </div>
+                
+            </div>
+
+            <div>   <!--links to the other page-->
+                <ul class="navigation_items">
+                    <li class="navigation_link"> <!--The <li> tag defines a list item.-->
+                        <a href="furniture.html">Furniture</a>
+                    </li>  
+                    <li class="navigation_link">
+                        <a href="kitchenware.html">Kitchenware</a>
+                    </li>
+                    <li class="navigation_link">
+                        <a href="decor.html">Decor</a>
+                    </li>
+                    <li class="navigation_link">
+                        <a href="about.html">About Us</a>
+                    </li>
+                    <li class="navigation_link"><a href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="cart-icon"> <!--Got cart icon from https://fontawesome.com/ -->
+                <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </div>
+    </nav>
+    <br><br><br>
+
+    <!--The Decor label-->
+    <div class="welcome"><h1>Decor</h1></div>
+
+    <br><br>
+    <div class="nav-menu flex-row">
+        <div>
+            <br><br>
+            <nav class="options">
+                <ul class="options_list">
+                    <li class="option_link">
+                        <a href="#">New In</a>
+                    </li>
+                    <li class="option_link">
+                        <a href="#">Indoor</a>
+                    </li>
+                    <li class="option_link">
+                        <a href="#">Outdoor</a>
+                    </li>
+                    <li class="option_link">
+                        <a href="#">Textile & Rugs</a>
+                    </li>
+                    <li class="option_link">
+                        <a href="#">Storage</a>
+                    </li>
+                    <li class="option_link">
+                        <a href="#">Plants</a>
+                    </li>
+                    <li class="option_link">
+                        <a href="#">Accessories</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        
+
+        <div class="item">
+            <ul>
+                <li>
+                    <a href=""><img src="./images/decor1.png"></a>
+                </li>
+                <li>
+                    <p>Seated Ballerina Figure, R499.99</p>
+                </li>
+            </ul>
+            
+        </div>
+
+        <div class="item">
+            <ul>
+                <li>
+                    <a href=""><img src="./images/decor2.png"></a>
+                </li>
+                <li>
+                    <p>Mesh Flip Calendar, R299.99</p>
+                </li>
+            </ul>
+            
+        </div>
+
+        <div class="item">
+            <ul>
+                <li>
+                    <a href=""><img src="./images/decor3.png"></a>
+                </li>
+                <li>
+                    <p>Seated Frog Statue, R499.99</p>
+                </li>
+            </ul>
+            
+        </div>
+
+        
+    </div>
+
+    <!-- Link to JQuery library-->
+    <script src="./js/jquery3.6.4.min.js"></script>
+
+    <!-- Link to custom js file-->
+    <script src="./js/main.js"></script>
+    
+</body>
+</html>

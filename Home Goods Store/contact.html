@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ContactUs</title>
+
+    <!--link to css file -->
+    <link rel="stylesheet" href="./CSS/style.css">
+
+    <!--link to all.css-->
+    <link rel="stylesheet" href="./CSS/all.css">
+</head>
+<body>
+    <!-- Creating a navigation menu so we use a nav tag-->
+    <nav class="nav">
+        <div class="nav-menu flex-row">
+
+            <div class="brand flex-row">
+                <div class="logo">
+                    <img src="./images/HGS_logo-PhotoRoom.png">
+                </div>
+                <a href="index.html">Home Goods Store</a>
+            </div>
+
+            <div class="toggle-collapse">  <!--If the screen size is partcularly small, we wil have a toggle icon instead of being able to see all the navigation items-->
+                <div class="toggle-icons">
+                    <i class="fas fa-bars"></i>
+                </div>
+                
+            </div>
+
+            <div>   <!--links to the other page-->
+                <ul class="navigation_items">
+                    <li class="navigation_link"> <!--The <li> tag defines a list item.-->
+                        <a href="furniture.html">Furniture</a>
+                    </li>  
+                    <li class="navigation_link">
+                        <a href="kitchenware.html">Kitchenware</a>
+                    </li>
+                    <li class="navigation_link">
+                        <a href="decor.html">Decor</a>
+                    </li>
+                    <li class="navigation_link">
+                        <a href="about.html">About Us</a>
+                    </li>
+                    <li class="navigation_link"><a href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="cart-icon"> <!--Got cart icon from https://fontawesome.com/ -->
+                <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+
+        </div>
+    </nav>
+    <br><br><br>
+
+    <!--The Contact Us label-->
+    <div class="welcome"><h1>Contact Us</h1></div>
+    <br><br><br>
+
+    <nav>
+        <p class="gift">For any enquiries, contact our main offices:</p>
+        
+            <ul class="contact">
+                <li>
+                    <p class="province">Western Cape</p>
+                    <p class="gift">50 Durban Road</p>
+                    <p class="gift">Mowbray</p>
+                    <p class="gift">Cape Town</p>
+                    <p class="gift">7700</p>
+                    <p class="gift">021 667 8965</p>
+                    <p class="gift">westerncape@homegoodsstore.co.za</p>
+                </li>
+                <li>
+                    <p class="province">Gauteng</p>
+                    <p class="gift">89 Badger Road</p>
+                    <p class="gift">Saxonwold</p>
+                    <p class="gift">Rosebank</p>
+                    <p class="gift">1852</p>
+                    <p class="gift">011 936 2783</p>
+                    <p class="gift">gauteng@homegoodsstore.co.za</p>
+                    
+                </li>
+                <li>
+                    <p class="province">Kwa-Zula Natal</p>
+                    <p class="gift">66 Phakathi Road</p>
+                    <p class="gift">Ethekwini</p>
+                    <p class="gift">Durban</p>
+                    <p class="gift">9780</p>
+                    <p class="gift">031 607 8455</p>
+                    <p class="gift">kwazulunatal@homegoodsstore.co.za</p>
+                </li>
+            </ul>
+        
+        
+    </nav>
+    <br><br><br>
+
+    <!-- Link to JQuery library-->
+    <script src="./js/jquery3.6.4.min.js"></script>
+
+    <!-- Link to custom js file-->
+    <script src="./js/main.js"></script>
+</body>
+</html>

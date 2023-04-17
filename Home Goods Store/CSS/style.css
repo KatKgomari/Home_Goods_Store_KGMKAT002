@@ -1,0 +1,1187 @@
+
+
+@import url(../CSS/fonts.css);
+
+
+:root{
+    /* face font family */
+    --Xanh_Mono: 'Xanh_Mono', cursive;
+    --Dosis: 'Dosis', cursive;
+    --Montserrat: 'Montserrat',  cursive;
+    --Golos_Text: 'Golos_Text', cursive;
+    --Noto_Serif: 'Noto_Serif', cursive;
+    --Shantell_Sans: 'Shantell_Sans', cursive;
+
+     /*   theme colours           */
+     --tea_green: rgb(199, 240, 189);
+     --light_blue: rgb(179, 205, 209);
+     --cool_gray: rgb(159, 164, 196);
+     --mountbatten_pink: rgb(158, 118, 143);
+     --eggplant: rgb(108, 70, 79);
+     --main_pink: #b12a5b;
+
+     /* gradients from web gradients*/
+     --gradient_young_passion: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+     --dusty_grass_gradient: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+     --winter_neva_gradient: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+     --everlasting_sky: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+     --purple_ish: linear-gradient(to top, #ebc0fd 0%, #d9ded8 100%);
+}
+
+html, body{
+    margin: 0%;
+    box-sizing: border-box;
+    background: var(--everlasting_sky);
+    font-family: var(--Xanh_Mono);
+    
+}
+
+a{
+    text-decoration: none; /*i.e. we do not want any of the underline*/
+    color: var(--cool_gray);/*I realize now that i have been attempting to change the colour of links and not text and that is why the color property has not been working*/
+}
+
+ul{
+    list-style-type: none;
+}
+
+.flex-row{ /*This will help us set our content horizontally */
+    display: flex;  
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/*Styling the navigation menu*/ 
+.nav{
+    background: var(--eggplant);
+    padding: 0 2rem; /*for the elements that apply this class. Top and bottom will be zero, and then there will 2rem on the sides  */
+    height: 0rem;    /*The heigth of the navigation panel*/
+    min-height: 11vh;
+    overflow: hidden; /*when I did not have this, my unordered list of navigation elements overflowed over where my navigation panel is supposed to end. And I could only scroll down that little space*/
+    transition: 1s ease-in-out;
+}
+
+.nav .nav-menu{ /*Only added this now */
+    justify-content:space-between;
+}
+
+.nav .brand a{
+    
+    padding: 0.9rem 0;
+    font-size: 3rem;
+    justify-content: left;
+    font-weight: 600;
+    
+}
+
+.nav .toggle-collapse{ /* I want this toggle menu to be on the RHS of the screen*/
+    position: absolute;
+    top: 0%;
+    width: 85%;
+    cursor: pointer;
+    display: none;  /*Do this so it is only visible when the screen is small. We will make it visvible in media query.*/
+}
+
+.nav .toggle-collapse .toggle-icons{
+    display: flex;
+    justify-content: flex-end; /*Aligning toggle on the RHS of the screen*/
+    padding: 2.1rem 0;
+}
+
+.nav .toggle-collapse .toggle-icons i{
+    font-size: 1.4rem;
+    color: var(--cool_gray);
+}
+
+.collapse{ /*The class associatred with the toggle menu*/
+    height: auto;
+}
+
+
+
+
+.nav .logo img{
+    width: 90px;
+    height: 90px;
+    
+}
+
+.nav .navigation_items{ /*This is for */
+    display: flex; /* This makes my unordered list lie horizontally and not vertically*/
+    margin: 0;
+    
+}
+
+.nav .navigation_items .navigation_link{
+    padding: 2rem 0.2rem;
+    font-size: 1.4rem;
+    position: relative;
+}
+
+
+.nav .navigation_items .navigation_link a{
+    padding: 2rem 1rem;
+}
+
+.nav .navigation_items .navigation_link:hover a{
+    background: var(--everlasting_sky);
+    color: var(--main_pink);
+}
+
+.nav .cart-icon{
+    padding-top: 1.6rem;
+    padding-bottom: 1.6rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.nav .cart-icon i{
+    font-size: 2.5rem;
+    
+}
+
+.nav .cart-icon i:hover{
+    color: var(--main_pink);
+}
+/*
+.cart-icon img{
+    width: 50px;
+    height: 50px;
+    padding: 1.1rem 3rem;
+}
+*/
+
+
+
+/*For Furniture*/
+
+.item img{
+    padding: 0 2rem;
+    width: 300px;
+    height: 450px;
+    
+}
+
+.item img:hover{
+    transform: scale(1.04);
+    overflow: auto;
+}
+
+.item p{
+    color: var(--main_pink);
+    font-size: 1.2rem;
+    
+}
+
+
+
+.heading{
+    font-size: 5rem;
+    text-align: center;
+    padding: 3rem 2rem;
+    color: cornsilk;
+    background-color: var(--main_pink);
+}
+
+.kitchen_picture{
+    padding: 1rem 3rem;
+    width: 15px;
+    height: 15px;
+}
+
+.welcome{ /*welcome to home goods store*/
+    font-size: 1.4rem;
+    
+    text-align: center;
+    padding: 1rem 2rem;
+    color: cornsilk;
+    background-color: var(--main_pink);
+}
+.options{
+    width: 300px;
+    height: 430px;
+    background-color: var(--eggplant);
+    overflow: hidden;
+}
+
+.options .option_link{
+    padding: 1rem 1.2rem;
+    font-size: 1.4rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.options_list{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.options .options_list .option_link a{
+    padding: 1rem 1rem;
+}
+
+.options .options_list .option_link:hover a{
+    background-color: corn;
+    color: var(--main_pink);
+}
+
+
+img{
+    width: 380px;
+    height: 550px;
+    padding: auto;
+}
+
+.pics{
+    height: fit-content;
+    width: fit-content;
+    overflow: hidden;
+    
+
+}
+
+.pics .picture_list{
+    display: flex; /* This makes my unordered list lie horizontally and not vertically*/
+    margin: 0;
+    
+}
+
+.pics .picture_list .images{
+    padding: 1rem 2rem;
+    position: relative;
+}
+
+.home_page_pics_bedroom{
+    background: var(--light_blue);
+    padding: 2rem 2rem; /*for the elements that apply this class. Top and bottom will be zero, and then there will 2rem on the sides  */
+        /*The heigth of the navigation panel*/
+    height: auto;
+    width:auto;
+    overflow: hidden; 
+}
+
+
+.home_page_text{
+    font-size: 1.4rem;
+    color: var(--main_pink);
+    
+}
+
+.home_page_text_chairs{
+    font-size: 1.4rem;
+    color: var(--cool_gray);
+}
+
+p{
+    text-align: center;
+}
+
+
+.home_page_pics_office{
+    background: var(--eggplant);
+    padding: 2rem 2rem; /*for the elements that apply this class. Top and bottom will be zero, and then there will 2rem on the sides  */
+    height: auto;    /*The heigth of the navigation panel*/
+    overflow: hidden; 
+}
+
+.home_page_pics_office .star{
+    text-align: center;
+}
+
+.home_page_pics_office .star i{
+    color: var(--cool_gray);
+}
+.home_page_pics_glass{
+    background: var(--cool_gray);
+    padding: 2rem 2rem; /*for the elements that apply this class. Top and bottom will be zero, and then there will 2rem on the sides  */
+    height: autp;    /*The heigth of the navigation panel*/
+    overflow: hidden; 
+}
+
+.home_page_text_glass{
+    font-size: 4rem;
+    color: var(--eggplant);
+    
+}
+
+.gift{
+    font-size: 1.3rem;
+    color: var(--eggplant);
+    font-weight: 600;
+}
+
+
+.home_page_pics_vase{
+    background: var(--mountbatten_pink);
+    padding: 2rem 2rem; /*for the elements that apply this class. Top and bottom will be zero, and then there will 2rem on the sides  */
+    height: auto;    /*The heigth of the navigation panel*/
+    overflow: hidden; 
+}
+
+.province{
+    font-size: 3rem;
+    color: var(--eggplant);
+    font-weight: 600;
+}
+
+.contact{
+    font-size: 1.4rem;
+    color: var(--eggplant);
+    text-align: center;
+}
+
+
+/*Styling of the home goods store picture*/
+
+.home_goods_store img{
+    width: 1200px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+
+.product{
+    
+    padding: 2rem 2rem; /*for the elements that apply this class. Top and bottom will be zero, and then there will 2rem on the sides  */
+    height: 0rem;    /*The heigth of the navigation panel*/
+    min-height: 80vh;
+    overflow: hidden; 
+}
+
+
+
+.product_text{
+    font-size: 3rem;
+    color: var(--eggplant);
+    
+}
+
+/*For the social media icons*/
+
+.social_media i{
+    padding: 1rem 0.2rem;
+    color: var(--cool_gray);
+    font-size: 1.3rem;
+}
+
+.social_media i:hover{
+    color: var(--main_pink); 
+}
+
+/*Responsive web design*/
+
+/*Phones: 480px and below*/
+@media (max-width:480px){
+    /*dealing with the navigation menu*/
+    .nav .nav-menu{
+        flex-direction: column;
+   }
+   .nav .navigation_items{ /*We want make the navigation items be in a column*/ 
+    flex-direction: column;
+    }
+
+    .nav .toggle-collapse{
+        display: initial; /*Now that screen is small, toggle menu will be visible.*/ 
+   }
+
+   /*The logo image*/
+   .nav .logo img{
+    max-width: 70%;
+    height: auto;
+    padding: 0.2rem 0.1rem;
+    }
+
+    
+    /*The name of the shop*/
+    .nav .brand a{
+    
+        padding-top: 1em;
+        padding-bottom: 1em;
+        padding-left: 0;
+        padding-right: 0.5em;
+        font-size: 1.7em;
+        justify-content: left;
+        font-weight: 600;
+        
+    }
+    /*The links in the navigation menu*/
+    .nav .navigation_items .navigation_link{
+        padding: 1em 0.2em;
+        font-size: 1em;
+        position: relative;
+    }
+
+    .welcome{ /*welcome to home goods store*/
+        font-size: 0.9em;
+    }
+
+    .home_page_pics_bedroom .pics{
+        flex-direction: column;
+    }
+
+    .home_page_pics_bedroom .picture_list{
+        padding: 1em 1em;
+        flex-direction: column;
+    }
+
+    .home_page_pics_bedroom .picture_list img{
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /*Ajusting the text size on the home page*/
+    .home_page_text{
+        font-size: 90%;
+        font-weight: 600; 
+    }
+
+    /*For the office section of the home page*/
+
+    .home_page_pics_office .pics{
+        flex-direction: column;
+    }
+
+    .home_page_pics_office  .picture_list{
+        padding: 1em 1em;
+        flex-direction: column;
+    }
+
+    .home_page_pics_office .picture_list img{
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /*Ajusting the text size on the home page*/
+    .home_page_text_chairs{
+        font-size: 90%; 
+        font-weight: 600;
+    }
+
+    /*For the glass section*/
+
+    .home_page_pics_glass .pics{
+        flex-direction: column;
+    }
+
+    .home_page_pics_glass  .picture_list{
+        padding: 1em 1em;
+        flex-direction: column;
+    }
+
+    .home_page_pics_glass .picture_list img{
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /*Ajusting the text size on the home page*/
+    .home_page_text_glass{
+        font-size: 150%; 
+        font-weight: 600;
+    }
+
+    .gift{
+        font-size: 90%;
+        font-weight: 600;
+    }
+
+    /*For the vase section*/
+    .home_page_pics_vase .pics{
+        flex-direction: column;
+    }
+
+    .home_page_pics_vase  .picture_list{
+        padding: 1em 1em;
+        flex-direction: column;
+    }
+
+    .home_page_pics_vase .picture_list img{
+        max-width: 100%;
+        height: auto;
+    }
+
+    /*The furniture page*/
+    .welcome{ /*welcome to home goods store*/
+        font-size: 1em;
+        padding: auto;
+    }
+
+    .item img{
+        padding: 1em 1em;
+        max-width: 80%;
+        height: auto;
+        
+    }
+    
+    .item p{
+        
+        font-size: 1.2em;
+        
+    }
+
+    .options{
+        max-width: 90%;
+        height: auto;
+    }
+    
+    .options .option_link{
+        padding: 1rem 1.2rem;
+        font-size: 1em;
+    }
+
+    /*Adjusting the text size on the contact page*/
+   
+
+    .contact .province{
+        font-size: 1.2em;
+    }
+
+    .contact .gift{
+        font-size: 0.5em;
+    }
+
+    /*Home good store image on about us page*/
+    .home_goods_store img{
+        max-width: 95%;
+        height: auto;
+    }
+}
+
+/*Phones to Tablets: 767px and below */
+@media (min-width:481px) and (max-width: 767px){
+
+    .nav .nav-menu{
+        flex-direction: column;
+   }
+   .nav .navigation_items{ /*We want make the navigation items be in a column*/ 
+    flex-direction: column;
+    }
+
+    .nav .toggle-collapse{
+        display: initial; /*Now that screen is small, toggle menu will be visible.*/ 
+   }
+
+   /*The logo image*/
+   .nav .logo img{
+    max-width: 70%;
+    height: auto;
+    padding: 0.2rem 0.1rem;
+    }
+
+    
+    /*The name of the shop*/
+    .nav .brand a{
+    
+        padding-top: 1em;
+        padding-bottom: 1em;
+        padding-left: 0;
+        padding-right: 0.5em;
+        font-size: 1.7em;
+        justify-content: left;
+        font-weight: 600;
+        
+    }
+    /*The links in the navigation menu*/
+    .nav .navigation_items .navigation_link{
+        padding: 1em 0.2em;
+        font-size: 1em;
+        position: relative;
+    }
+
+    .welcome{ /*welcome to home goods store*/
+        font-size: 0.9em;
+    }
+
+    .home_page_pics_bedroom .pics{
+        flex-direction: column;
+    }
+
+    .home_page_pics_bedroom .picture_list{
+        padding: 1em 1em;
+        flex-direction: column;
+    }
+
+    .home_page_pics_bedroom .picture_list img{
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /*Ajusting the text size on the home page*/
+    .home_page_text{
+        font-size: 90%;
+        font-weight: 600; 
+    }
+
+    /*For the office section of the home page*/
+
+    .home_page_pics_office .pics{
+        flex-direction: column;
+    }
+
+    .home_page_pics_office  .picture_list{
+        padding: 1em 1em;
+        flex-direction: column;
+    }
+
+    .home_page_pics_office .picture_list img{
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /*Ajusting the text size on the home page*/
+    .home_page_text_chairs{
+        font-size: 90%; 
+        font-weight: 600;
+    }
+
+    /*For the glass section*/
+
+    .home_page_pics_glass .pics{
+        flex-direction: column;
+    }
+
+    .home_page_pics_glass  .picture_list{
+        padding: 1em 1em;
+        flex-direction: column;
+    }
+
+    .home_page_pics_glass .picture_list img{
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /*Ajusting the text size on the home page*/
+    .home_page_text_glass{
+        font-size: 150%; 
+        font-weight: 600;
+    }
+
+    .gift{
+        font-size: 90%;
+        font-weight: 600;
+    }
+
+    /*For the vase section*/
+    .home_page_pics_vase .pics{
+        flex-direction: column;
+    }
+
+    .home_page_pics_vase  .picture_list{
+        padding: 1em 1em;
+        flex-direction: column;
+    }
+
+    .home_page_pics_vase .picture_list img{
+        max-width: 100%;
+        height: auto;
+    }
+
+    /*The furniture page*/
+    .welcome{ /*welcome to home goods store*/
+        font-size: 1em;
+        padding: auto;
+    }
+
+    .item img{
+        padding: 1em 1em;
+        max-width: 80%;
+        height: auto;
+        
+    }
+    
+    .item p{
+        
+        font-size: 1.2em;
+        
+    }
+
+    .options{
+        max-width: 90%;
+        height: auto;
+    }
+    
+    .options .option_link{
+        padding: 1rem 1.2rem;
+        font-size: 1em;
+    }
+
+    /*Adjusting the text size on the contact page*/
+   
+
+    .contact .province{
+        font-size: 1.2em;
+    }
+
+    .contact .gift{
+        font-size: 0.5em;
+    }
+
+    /*Home good store image on about us page*/
+    .home_goods_store img{
+        max-width: 95%;
+        height: auto;
+    }
+
+    .nav-menu .item{
+        flex-direction: column;
+   }
+
+}
+
+/*Tablets: 768px and above*/
+@media (min-width:768px) and (max-width: 989px){
+    .nav .nav-menu{
+        flex-direction: column;
+   }
+   .nav .navigation_items{ /*We want make the navigation items be in a column*/ 
+    flex-direction: column;
+    }
+
+    .nav .toggle-collapse .toggle-icons i{
+        font-size: 1.6em;
+        color: var(--cool_gray);
+    }
+
+    .nav .toggle-collapse{
+        display: initial; /*Now that screen is small, toggle menu will be visible.*/ 
+   }
+
+   /*The logo image*/
+   .nav .logo img{
+    max-width: 70%;
+    height: auto;
+    padding: 0.2rem 0.1rem;
+    }
+
+    
+    /*The name of the shop*/
+    .nav .brand a{
+    
+        padding-top: 0.7em;
+        padding-bottom: 0.9em;
+        padding-left: 0;
+        padding-right: 0.5em;
+        font-size: 2.2em;
+        justify-content: left;
+        font-weight: 600;
+        
+    }
+    /*The links in the navigation menu*/
+    .nav .navigation_items .navigation_link{
+        padding: 1em 0.2em;
+        font-size: 1em;
+        position: relative;
+    }
+
+    .welcome{ /*welcome to home goods store*/
+        font-size: 0.9em;
+    }
+    
+    .home_page_pics_bedroom .picture_list img{
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /*Ajusting the text size on the home page*/
+    .home_page_text{
+        font-size: 90%;
+        font-weight: 600; 
+    }
+
+    
+
+    .home_page_pics_office .picture_list img{
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /*Ajusting the text size on the home page*/
+    .home_page_text_chairs{
+        font-size: 90%; 
+        font-weight: 600;
+    }
+
+    /*For the glass section*/
+
+    
+
+    .home_page_pics_glass .picture_list img{
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /*Ajusting the text size on the home page*/
+    .home_page_text_glass{
+        font-size: 150%; 
+        font-weight: 600;
+    }
+
+    .gift{
+        font-size: 90%;
+        font-weight: 600;
+    }
+
+    /*For the vase section*/
+
+    .home_page_pics_vase .picture_list img{
+        max-width: 100%;
+        height: auto;
+    }
+
+
+    /*The furniture page*/
+    .welcome{ /*welcome to home goods store*/
+        font-size: 1em;
+        padding: auto;
+    }
+
+    .item img{
+        padding: 1em 1em;
+        max-width: 80%;
+        height: auto;
+        
+    }
+
+   
+    .item p{
+        
+        font-size: 1.2em;
+        
+    }
+
+    .options{
+        max-width: 90%;
+        height: auto;
+    }
+    
+    .options .option_link{
+        padding: 1rem 1.2rem;
+        font-size: 1em;
+    }
+
+    /*Adjusting the text size on the contact page*/
+   
+
+    .contact .province{
+        font-size: 1.2em;
+    }
+
+    .contact .gift{
+        font-size: 0.5em;
+    }
+
+    /*Home good store image on about us page*/
+    .home_goods_store img{
+        max-width: 95%;
+        height: auto;
+    }
+
+    .options .options_list{ /*This is for */
+        display: flex; /* This makes my unordered list lie horizontally and not vertically*/
+        margin: 0;
+        
+    }
+    
+    
+
+   
+
+}
+
+/*Net Book: 990px to 1024px*/
+@media (min-width:990px) and (max-width: 1024px){
+  
+
+   /*The logo image*/
+   .nav .logo img{
+    max-width: 70%;
+    height: auto;
+    padding: 0.2rem 0.1rem;
+    }
+
+    
+    /*The name of the shop*/
+    .nav .brand a{
+    
+        padding-top: 1.5em;
+        padding-bottom: 1em;
+        padding-left: 0;
+        padding-right: 0.5em;
+        font-size: 1.4em;
+        justify-content: left;
+        font-weight: 600;
+        
+    }
+    /*The links in the navigation menu*/
+    .nav .navigation_items .navigation_link{
+        padding: 2.4em 0.1em;
+        font-size: 1em;
+        position: relative;
+    }
+
+    .nav .cart-icon{
+        padding: 2em 2em;
+    }
+    
+    .nav .cart-icon i{
+        font-size: 1em;
+        
+    }
+
+    .welcome{ /*welcome to home goods store*/
+        font-size: 0.9em;
+    }
+    
+    .home_page_pics_bedroom .picture_list img{
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /*Ajusting the text size on the home page*/
+    .home_page_text{
+        font-size: 90%;
+        font-weight: 600; 
+    }
+
+    
+
+    .home_page_pics_office .picture_list img{
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /*Ajusting the text size on the home page*/
+    .home_page_text_chairs{
+        font-size: 90%; 
+        font-weight: 600;
+    }
+
+    /*For the glass section*/
+
+    
+
+    .home_page_pics_glass .picture_list img{
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /*Ajusting the text size on the home page*/
+    .home_page_text_glass{
+        font-size: 150%; 
+        font-weight: 600;
+    }
+
+    .gift{
+        font-size: 90%;
+        font-weight: 600;
+    }
+
+    /*For the vase section*/
+
+    .home_page_pics_vase .picture_list img{
+        max-width: 100%;
+        height: auto;
+    }
+
+
+    /*The furniture page*/
+    .welcome{ /*welcome to home goods store*/
+        font-size: 1em;
+        padding: auto;
+    }
+
+    .item img{
+        padding: 1em 1em;
+        max-width: 80%;
+        height: auto;
+        
+    }
+
+   
+    .item p{
+        
+        font-size: 1.2em;
+        
+    }
+
+    .options{
+        max-width: 90%;
+        height: auto;
+    }
+    
+    .options .option_link{
+        padding: 1rem 1.2rem;
+        font-size: 1em;
+    }
+
+    /*Adjusting the text size on the contact page*/
+   
+
+    .contact .province{
+        font-size: 1.2em;
+    }
+
+    .contact .gift{
+        font-size: 0.5em;
+    }
+
+    /*Home good store image on about us page*/
+    .home_goods_store img{
+        max-width: 95%;
+        height: auto;
+    }
+
+    .options .options_list{ /*This is for */
+        display: flex; /* This makes my unordered list lie horizontally and not vertically*/
+        margin: 0;
+        
+    }
+}
+
+/*Monitor: 1024px and above*/
+@media (min-width:1025px) and (max-width:1366px){
+
+    /*The logo image*/
+   .nav .logo img{
+    max-width: 70%;
+    height: auto;
+    padding: 0.2rem 0.1rem;
+    }
+
+    
+    /*The name of the shop*/
+    .nav .brand a{
+    
+        padding-top: 1.5em;
+        padding-bottom: 1em;
+        padding-left: 0;
+        padding-right: 0.5em;
+        font-size: 1.4em;
+        justify-content: left;
+        font-weight: 600;
+        
+    }
+    
+
+  
+    /*The links in the navigation menu*/
+    .nav .navigation_items .navigation_link{
+        padding: 2.4em 0.1em;
+        font-size: 1em;
+        position: relative;
+    }
+
+    .nav .cart-icon{
+        padding: 2.2em 2em;
+    }
+    
+    .nav .cart-icon i{
+        font-size: 1.1em;
+        
+    }
+
+    .welcome{ /*welcome to home goods store*/
+        font-size: 0.9em;
+    }
+    
+    .home_page_pics_bedroom .picture_list img{
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /*Ajusting the text size on the home page*/
+    .home_page_text{
+        font-size: 90%;
+        font-weight: 600; 
+    }
+
+    
+
+    .home_page_pics_office .picture_list img{
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /*Ajusting the text size on the home page*/
+    .home_page_text_chairs{
+        font-size: 90%; 
+        font-weight: 600;
+    }
+
+    /*For the glass section*/
+
+    
+
+    .home_page_pics_glass .picture_list img{
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /*Ajusting the text size on the home page*/
+    .home_page_text_glass{
+        font-size: 150%; 
+        font-weight: 600;
+    }
+
+    .gift{
+        font-size: 90%;
+        font-weight: 600;
+    }
+
+    /*For the vase section*/
+
+    .home_page_pics_vase .picture_list img{
+        max-width: 100%;
+        height: auto;
+    }
+
+
+    /*The furniture page*/
+    .welcome{ /*welcome to home goods store*/
+        font-size: 1em;
+        padding: auto;
+    }
+
+    .item img{
+        padding: 1em 1em;
+        max-width: 80%;
+        height: auto;
+        
+    }
+
+   
+    .item p{
+        
+        font-size: 1.2em;
+        
+    }
+
+    .options{
+        max-width: 90%;
+        height: auto;
+    }
+    
+    .options .option_link{
+        padding: 1rem 1.2rem;
+        font-size: 1em;
+    }
+
+    /*Adjusting the text size on the contact page*/
+   
+
+   
+
+    /*Home good store image on about us page*/
+    .home_goods_store img{
+        max-width: 95%;
+        height: auto;
+    }
+
+    
+    
+}
+
+
+

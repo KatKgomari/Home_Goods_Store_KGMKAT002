@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AboutUs</title>
+
+    <!--link to css file-->
+    <link rel="stylesheet" href="./CSS/style.css">
+    
+    <!--link to all.css-->
+    <link rel="stylesheet" href="./CSS/all.css">
+</head>
+<body>
+    <!-- Creating a navigation menu so we use a nav tag-->
+    <nav class="nav">
+        <div class="nav-menu flex-row">
+            <div class="brand flex-row">
+                
+                <div class="logo">
+                    <img src="./images/HGS_logo-PhotoRoom.png">
+                </div>
+                <a href="index.html">Home Goods Store</a>
+            </div>
+
+            <div class="toggle-collapse">  <!--If the screen size is partcularly small, we wil have a toggle icon instead of being able to see all the navigation items-->
+                <div class="toggle-icons">
+                    <i class="fas fa-bars"></i>
+                </div>
+                
+            </div>
+            
+            <div>   <!--links to the other page-->
+                <ul class="navigation_items">
+                    <li class="navigation_link"> <!--The <li> tag defines a list item.-->
+                        <a href="furniture.html">Furniture</a>
+                    </li>  
+                    <li class="navigation_link">
+                        <a href="kitchenware.html">Kitchenware</a>
+                    </li>
+                    <li class="navigation_link">
+                        <a href="decor.html">Decor</a>
+                    </li>
+                    <li class="navigation_link">
+                        <a href="about.html">About Us</a>
+                    </li>
+                    <li class="navigation_link"><a href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="cart-icon"> <!--Got cart icon from https://fontawesome.com/ -->
+                <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </div>
+    </nav>
+    <br><br><br>
+
+    <!--The furniture label-->
+    <div class="welcome">
+        <h1>About Us</h1>
+        <p>Welcome to Home Goods Store. Here we sell furniture, kitchenware, decor, bedding, bath products and much more! We have so
+            many different items and trinkets to make your space look just right, whether you are a homeowner, renter, designer or are searching for a housewarming gift, we have something! All of these are available in a wide range of colours 
+            and sizes.</p>
+    </div>
+    <br><br><br>
+
+    <div class="home_goods_store"> 
+        <center><img src="./images/home_goods_store.png"></center> <!--Used HTML center attribute and not the css file be cause I don't need to repeat this anywhere.-->
+    </div>
+
+    <!-- Link to JQuery library-->
+    <script src="./js/jquery3.6.4.min.js"></script>
+
+    <!-- Link to custom js file-->
+    <script src="./js/main.js"></script>
+</body>
+</html>

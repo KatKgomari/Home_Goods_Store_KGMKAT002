@@ -1,0 +1,191 @@
+<!--Other resources that helped in my learning the material:
+https://youtu.be/CrSC1ZA9j0M
+https://youtu.be/--XrIa-iey0
+https://youtu.be/yQimoqo0-7g-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Goods Store</title>
+
+    <!-- link to css styling-->
+    <link rel="stylesheet" href="./CSS/style.css">
+
+    <!-- link to all.css-->
+    <link rel="stylesheet" href="./CSS/all.css">
+</head>
+<body>
+
+    <!-- Creating a navigation menu so we use a nav tag-->
+    <nav class="nav">
+        <div class="nav-menu flex-row">
+
+            <div class="brand flex-row">
+                <div class="logo">
+                    <img src="./images/HGS_logo-PhotoRoom.png">
+                </div>
+                
+                <a href="index.html">Home Goods Store</a>
+            </div>
+
+            <div class="toggle-collapse">  <!--If the screen size is partcularly small, we wil have a toggle icon instead of being able to see all the navigation items-->
+                <div class="toggle-icons">
+                    <i class="fas fa-bars"></i>
+                </div>
+                
+            </div>
+            
+            <div>   <!--links to the other page-->
+                <ul class="navigation_items">
+                    <li class="navigation_link"> <!--The <li> tag defines a list item.-->
+                        <a href="furniture.html">Furniture</a>
+                    </li>  
+                    <li class="navigation_link">
+                        <a href="kitchenware.html">Kitchenware</a>
+                    </li>
+                    <li class="navigation_link">
+                        <a href="decor.html">Decor</a>
+                    </li>
+                    <li class="navigation_link">
+                        <a href="about.html">About Us</a>
+                    </li>
+                    <li class="navigation_link">
+                        <a href="contact.html">Contact Us</a>
+                    </li>
+                
+                    
+                </ul>
+            </div>
+
+            <div class="cart-icon"> <!--Got cart icon from https://fontawesome.com/ -->
+                <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+            
+
+        </div>
+    </nav>
+
+    <br><br><br>
+    
+    <div class="welcome">
+        <h2>Hello! Looking for something to elevate your space?</h2>
+
+    </div>
+
+    <br><br><br>
+
+    <nav class="home_page_pics_bedroom">
+        <div class="pics flex-row">
+            <ul class="picture_list">
+                <li class="images">
+                    <img src="./images/bed1.png" alt="Oops!">
+                    <p class="home_page_text">*First: Microfibre Soft Touch Digital Floral Duvet Cover Set. Colour: Multi-coloured, Material: Polyester</p>
+                </li>
+                
+                <li class="images"> 
+                    <img src="./images/bed2.png" alt="Oops!">
+                    <p class="home_page_text">*Second: Microfibre Quartz Block Comforter Set. Colour: Shades of blue and white, Material: Polyester</p>
+                </li>
+                
+                <li class="images">
+                    <img src="./images/bed3.png" alt="Oops!">
+                    <p class="home_page_text">*Third: Polycotton Marble Foil Abstract Duvet Cover Set. Colour: Pewter, Material: 50% Cotton, 50% Polyester</p>
+                </li>
+            </ul>
+        </div>
+        <p class="home_page_text">Make your bedroom even more homely and comfortable with the duvet covers, only for R300 each! Available in single, double, queen and king sizes.</p>
+        
+        
+        
+    </nav>
+
+    <br><br><br>
+    
+    <nav class="home_page_pics_office">
+        <div class="pics flex-row">
+            <ul class="picture_list">
+                <li class="images">
+                    <img src="./images/chair1.png" alt="Oops!">
+                </li>
+                
+                <li class="images"> 
+                    <img src="./images/chair2.png" alt="Oops!">
+                </li>
+                
+                <li class="images">
+                    <img src="./images/chair3.png" alt="Oops!">
+                </li>
+            </ul>
+        </div>
+        <p class="home_page_text_chairs">Buy comfortable chairs for your office, only for R999.99 each!</p>
+
+        
+        
+    </nav>
+    <br><br><br>
+
+    <nav class="home_page_pics_glass">
+        <div class="pics flex-row">
+            <ul class="picture_list">
+                <li class="images">
+                    <img src="./images/glass_gift.png" alt="Oops!">
+                </li>
+                <li>
+                    <p class="home_page_text_glass">Housewarming & Wedding gifts on sale!</p>
+                    <p class="gift">(left) Maison Champagne Flute 4 Pack</p>
+                    <p class="gift">R499,99</p>
+                    <p class="gift">Colour: Clear</p>
+                    <p class="gift"> Studio-W lead-free, crystal glasses</p>
+                    
+                </li>
+                
+            </ul>
+        </div>
+        
+    </nav>
+    <br><br><br>
+
+    <nav class="home_page_pics_vase">
+        <div class="pics flex-row">
+            <ul class="picture_list">
+                <li class="images">
+                    <img src="./images/vase1.png" alt="Oops!">
+                </li>
+                <li>
+                    <p class="home_page_text_glass">Customize your apartment!</p>
+                    <p class="gift">(left) Durango Ceramic Vase Medium, R299,99 </p>
+                    <p class="gift">Colour: Winter White</p>
+                    <p class="gift">Dimensions: L40xW13xH37 cm</p>
+                    <p class="gift">(right) Classic Glaze Vase Medium, R399,99</p>
+                    <p class="gift">Colour: Airforce Blue</p>
+                    <p class="gift">Dimensions: W16xH23.5 cm</p>
+                    
+                </li>
+                <li class="images">
+                    <img src="./images/vase2.png" alt="Oops!">
+                </li>
+            </ul>
+        </div>
+        
+    </nav>
+    <br>
+    
+    <!--social media tags-->
+
+    <center><div class="social_media">
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+    </div></center>
+
+    <!-- Link to JQuery library-->
+    <script src="./js/jquery3.6.4.min.js"></script>
+
+    <!-- Link to custom js file-->
+    <script src="./js/main.js"></script>
+</body>
+</html>
